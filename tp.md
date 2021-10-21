@@ -14,6 +14,3 @@ Après ceci, on peut relancer la machine mais dès qu'on ouvre un terminal, la b
 
 
 
-> code
-
-```
