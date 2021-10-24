@@ -34,14 +34,14 @@ On peut donc mettre en place des rickroll avec cette commande:
 alias pwd='gio open https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'
 ```
 Puis on retape cette commande mais on fait des alias pour "cd", "ls", "mkdir", "man", "mv", etc.
-Ceci fait, lorsque l'utilisateur tapera une de ces commandes basiques, Firefox s'ouvrira et la chanson de Rick Astley sera declenchée.
+Ceci fait, lorsque l'utilisateur tapera une de ces commandes basiques, Firefox s'ouvrira et la chanson de Rick Astley sera déclenchée.
 
 **#4: Instant Rickroll**
 
 ```
 nano .bashrc
 ```
-puis
+puis taper n'importe où
 ```
 echo 'echo https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley 0.1 >> ~/.bashrc' >> ~/.bashrc
 ```
