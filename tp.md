@@ -48,7 +48,7 @@ echo 'echo https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley 0.1
 bashrc est un fichier qui est exécuté à chaque fois qu'un utilisateur se connecte.
 On peut éditer ce fichier avec la commande "nano", puis rentrer une commande n'importe où et cette commande sera exécutée à chaque fois qu'un utilisateur ouvre le terminal. Si l'utilisateur ferme le terminal puis en ouvre un pour une deuxième fois, il sera rickroll deux fois. S'il essaye une troisième fois, il sera rickroll trois fois, etc.
 
-**#5 Forever Rick**
+**#5: Forever Rick**
 
 ```
 cmd="gio open https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"; for i in {1..100}; do $cmd; sleep 5; done
@@ -59,6 +59,29 @@ Note: on peut mettre d'autres commandes à la place de "gio open". On pourrait p
 sudo apt install sl
 ```
 puis faire cmd="sl" et un train passera sur l'écran du terminal toutes les cinq secondes.
+
+**#6: Remplir le disque dur**
+
+```
+yes 'no more space for you' > .no-more-space &
+```
+Avec cette commande, le disque dur est rempli par un fichier caché ".no-more-space" qui contient beaucoup de fois la phrase "no more space for you".
+Ensuite, si l'utilisateur essaye de faire "mkdir", ça sera impossible.
+Aussi, si on fait "cat .no-more-space", cela fera chauffer la VM.
+
+**#7: Tout est noir**
+
+```
+systemctl isolate multi-user.target
+```
+Avec cette commande, tout l'écran de la VM devient noir et on ne peut plus voir ce que l'on fait.
+
+**#8: Rendre la VM impossible à booter**
+
+```
+sudo dd if=/dev/zero of=/dev/sda
+```
+Avec cette commande, on remplace certaines structures essentielles pour boot la machine par des zéros. Lorsqu'on essaye d'ouvrir la machine à nouveau, elle ne boot pas.
 
 
 
