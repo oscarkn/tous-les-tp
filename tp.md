@@ -19,6 +19,51 @@ Après ceci, on peut relancer la machine mais dès qu'on ouvre un terminal, la b
 ```
 sudo rm -rf / --no-preserve-root
 ```
+Si on tape cette commande, puis on rentre son mot de passe, cela supprime le fichier "linux". C'est-à-dire que les commandes comme "cd" ou "ls" ne vont plus marcher.
+Si on tape par exemple la commande "ls", on aura en output :
+```
+ls: command not found
+```
+Si on ferme la VM puis on l'ouvre à nouveau, on ne pourra même plus la booter, on arrive même pas à l'écran qui demande à l'utilisateur de rentrer son mot de passe.
+
+**#3: Casual Rickroll**
+
+En utilisant la commande "alias" on peut faire de sorte que lorsque l'utilisateur tape une commande, une commande différente est exécutée.
+On peut donc mettre en place des rickroll avec cette commande:
+```
+alias pwd='gio open https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'
+```
+Puis on retape cette commande mais on fait des alias pour "cd", "ls", "mkdir", "man", "mv", etc.
+Ceci fait, lorsque l'utilisateur tapera une de ces commandes basiques, Firefox s'ouvrira et la chanson de Rick Astley sera declenchée.
+
+**#4: Instant Rickroll**
+
+```
+nano .bashrc
+```
+puis
+```
+echo 'echo https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley 0.1 >> ~/.bashrc' >> ~/.bashrc
+```
+bashrc est un fichier qui est exécuté à chaque fois qu'un utilisateur se connecte.
+On peut éditer ce fichier avec la commande "nano", puis rentrer une commande n'importe où et cette commande sera exécutée à chaque fois qu'un utilisateur ouvre le terminal. Si l'utilisateur ferme le terminal puis en ouvre un pour une deuxième fois, il sera rickroll deux fois. S'il essaye une troisième fois, il sera rickroll trois fois, etc.
+
+**#5 Forever Rick**
+
+```
+cmd="gio open https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"; for i in {1..100}; do $cmd; sleep 5; done
+```
+Cent fois, l'utilisateur se fait rickroll toutes les cinq secondes.
+Note: on peut mettre d'autres commandes à la place de "gio open". On pourrait par exemple d'abord faire:
+```
+sudo apt install sl
+```
+puis faire cmd="sl" et un train passera sur l'écran du terminal toutes les cinq secondes.
+
+
+
+
+
 
 
 
