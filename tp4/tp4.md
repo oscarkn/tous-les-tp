@@ -348,22 +348,37 @@ On édite le fichier nginx.conf
 ```
 [oscar@node1 nginx]$ sudo nano nginx.conf
 ```
-On cherche "root" puis on remplace l'ancienne racine web par la nouvelle (/var/www/super_site_web/index.html)
+On cherche "root" puis on remplace l'ancienne racine web par la nouvelle (/var/www/super_site_web)
 ```
  server {
         listen       8080 default_server;
         listen       [::]:8080 default_server;
         server_name  _;
-        root         /var/www/super_site_web/index.html;
+        root         /var/www/super_site_web;
 ```
-On accède au nouveau site:
+On accède au nouveau site depuis le Terminal du PC:
 ```
-[oscar@node1 nginx]$ curl http://10.250.1.56:8080
-<html>
-<head><title>404 Not Found</title></head>
-<body bgcolor="white">
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx/1.14.1</center>
-</body>
-</html>
+PS C:\Users\oscar> curl http://10.250.1.56:8080
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : <h1>toto</h1>
+
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Accept-Ranges: bytes
+                    Content-Length: 14
+                    Content-Type: text/html
+                    Date: Wed, 24 Nov 2021 20:47:15 GMT
+                    ETag: "619e981c-e"
+                    Last-Modified: Wed, 24 Nov 2021 19:...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Accept-Ranges, bytes], [Content-Length, 14], [Content-Type,
+                    text/html]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 14
 ```
