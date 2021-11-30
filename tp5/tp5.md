@@ -92,8 +92,6 @@ before moving into a production environment.
 Remove test database and access to it? [Y/n] Y
 ```
 Comme avec les utilisateurs anonymes, l'intérêt de cette base de données "test" pourrait être détourné, donc on n'en veut pas.
-
-I still don't want to lose my kidneys 🙈
 ```
  - Dropping test database...
  ... Success!
