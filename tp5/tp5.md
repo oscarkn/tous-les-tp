@@ -97,14 +97,12 @@ Comme avec les utilisateurs anonymes, l'intérêt de cette base de données "tes
  ... Success!
  - Removing privileges on test database...
  ... Success!
-```
 
 Reloading the privilege tables will ensure that all changes made so far
 will take effect immediately.
-```
 Reload privilege tables now? [Y/n] Y
 ```
-Oui, nos changements doivent être respectés, sinon c'était tout pour rien et on est vraiment pas en sécurité.
+Oui, nos changements doivent être respectés, sinon c'était tout pour rien et on est pas en sécurité.
 ```
  ... Success!
 
